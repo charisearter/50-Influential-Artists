@@ -1,5 +1,5 @@
 .font {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: dimgrey;
 }
 html,
@@ -90,19 +90,16 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9vAw.ttf) format('truetype');
-}
 * {
   box-sizing: border-box;
 }
 .container {
   max-width: 100%;
   padding: 15%;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  color: dimgrey;
 }
 a {
   text-decoration: none;
