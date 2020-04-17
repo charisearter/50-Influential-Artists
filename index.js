@@ -254,37 +254,37 @@ function removeArtist(artists, id) {
     /* code here */
   }
   console.log(removeArtist(artists, 6));
-  /**
-
+  
+  console.log(artists[7].name);
+  /*
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(data){
-  const x = []; //new array for artists
-  //for loop to go over array
-  for (let i=0; i < artists.length; i++){
-    //if data is or fits between 1800 - 1900
-    if (data == artists[i].years){
-      if (artists[i].years >= 1800 && artists[i].years <= 1900){
-    // push the artist objects into the new array
-    x.push(artists[i]);
-      }//ends if statement inside
-  }// ends if statements outside
-}//ends for loop
-  //return teh new array
-return x;
-
-  }// ends function
-
-  console.log(get20s(1804));
+// function get20s(data){
+//   let x = []; //new array for artists
+//     if (data == artists[id].years){
+//       if (artists[id].years >= 1800 && artists[id].years <= 1900){
+//     // push the artist objects into the new array
+//     x.push(artists[id].name);
+//       }//ends if statement inside
+//   }// ends if statements outside
+//   return x;
+// }//ends for function
+//   console.log(get20s(1800));
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
+// function lotsOfArt(artists){ //argument is array of artists
+//   //empty array for names
+//   let x = [];
+// //look for artists that did more than 100 paintings
 
-    /* Code here */
 
-  }
+// //return artists names
+// return x;
+//     /* Code here */
+
+//   }
 
 
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -296,23 +296,25 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(id, name, years, genre, nationality, bio){
+let newArtist = {id, name, years, genre, nationality, bio}
 
-    /* Code here */
-
+    artists.push(newArtist);
   }
 
-
+  console.log(addArtist(21, 'Charise Arter', '1982 - present', 'Web Design', 'American (USA)', 'Aliquam sem massa, sagittis quis tellus vel, mattis pulvinar nulla. Etiam a tellus feugiat, porttitor nisi id, congue elit.'));
+console.log(artists);
+ 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
+function checkArtist(name){
+ if  (artists.match(name)){
+   console.log('Yup');
+ }
+ 
+  } //end function
 
-    /* Code here */
-
-  }
-
-
-
+console.log (checkArtist('Charise Arter'));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
