@@ -134,34 +134,34 @@ header {
 #hr hr {
   border: 1px solid dimgrey;
   width: 80%;
-  margin: 3% 0;
+  margin: 2% 0;
 }
 .artists-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
-  padding-top: 2%;
+  padding: 0 10%;
 }
 .artists-container .artist {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
-  border: 1px solid green;
+  width: 70%;
 }
 .artists-container .artist img {
   border-radius: 10px;
-  width: 40%;
+  width: 50%;
   padding-bottom: 2%;
 }
 .artists-container .artist h2 {
   font-size: 1.3rem;
 }
 .artists-container .artist .bio {
-  width: 70%;
+  width: 90%;
   text-align: center;
   padding: 1%;
+  margin-bottom: 3%;
 }
 .title-container {
   display: flex;
