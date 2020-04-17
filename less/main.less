@@ -6,39 +6,28 @@ header {
    
 }
 
-.title-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: orange;
-    padding-bottom: 3%;
-
-    h1 {
-        font-size: 3rem;
-        color: white;
-
-    }
-
-    .btn {
-        background-color: purple;
-        .button();
-    }
+.hr {
+hr {
+    border: 1px solid @fontcolor;
+    width: 80%;
+    margin: 3% 0;
+}    
 }
+
 
 .artists-container {
     display: flex;
     justify-content: center;
-    border-top: 2px solid grey;
+    align-content: center;
     padding-top: 2%;
-
 
     .artist {
         display:flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
         width: 80%;
-        padding: 0 1%;
+        border: 1px solid green;
 
         img {
             border-radius: 10px;
@@ -47,14 +36,13 @@ header {
         }
 
         h2{
-            margin: 2% 0;
             font-size: 1.3rem;
         }
         .bio {
-            background-color: lightblue;
             width: 70%;
             text-align: center;
-            margin: 3% 1%;
+            padding: 1%;
+           
 
         
         }

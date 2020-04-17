@@ -2,6 +2,12 @@
   font-family: 'Raleway', sans-serif;
   color: dimgrey;
 }
+.link-hover {
+  font-weight: 900;
+}
+.img-hover {
+  opacity: 0.5;
+}
 html,
 body,
 div,
@@ -93,10 +99,6 @@ video {
 * {
   box-sizing: border-box;
 }
-.container {
-  max-width: 100%;
-  padding: 15%;
-}
 body {
   font-family: 'Raleway', sans-serif;
   color: dimgrey;
@@ -105,55 +107,44 @@ a {
   text-decoration: none;
   color: dimgrey;
 }
+img:hover {
+  opacity: 0.5;
+}
 nav {
+  font-family: 'Raleway', sans-serif;
   color: dimgrey;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 nav a {
   text-decoration: none;
   color: dimgrey;
 }
-nav a:active {
-  font-weight: 900;
+nav a:hover {
+  font-weight: 700;
 }
 header {
   display: flex;
   justify-content: center;
   padding: 3% 5%;
 }
-.title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: orange;
-  padding-bottom: 3%;
-}
-.title-container h1 {
-  font-size: 3rem;
-  color: white;
-}
-.title-container .btn {
-  background-color: purple;
-  display: flex;
-  justify-content: space-around;
-  width: 15%;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.4rem;
+.hr hr {
+  border: 1px solid dimgrey;
+  width: 80%;
+  margin: 3% 0;
 }
 .artists-container {
   display: flex;
   justify-content: center;
-  border-top: 2px solid grey;
+  align-content: center;
   padding-top: 2%;
 }
 .artists-container .artist {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   width: 80%;
-  padding: 0 1%;
+  border: 1px solid green;
 }
 .artists-container .artist img {
   border-radius: 10px;
@@ -161,12 +152,46 @@ header {
   padding-bottom: 2%;
 }
 .artists-container .artist h2 {
-  margin: 2% 0;
   font-size: 1.3rem;
 }
 .artists-container .artist .bio {
-  background-color: lightblue;
   width: 70%;
   text-align: center;
-  margin: 3% 1%;
+  padding: 1%;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid pink;
+  background-image: url("../assets/home.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  margin: 0 15%;
+  height: 60vh;
+  width: 70vw;
+  margin-bottom: 3%;
+}
+.title-container h1 {
+  width: 50%;
+  font-size: 3.2rem;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.title-container .btn {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+  padding: 1%;
+  border: 1px border-color: dimgrey; border-style: solid;;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 5px #888;
 }

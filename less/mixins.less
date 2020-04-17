@@ -3,12 +3,30 @@
     color: @fontcolor;
 }
 
+.border (@style, @color){
+    border-color: @color;
+    border-style: @style;
+}
+
+.link-hover {
+    font-weight: 900;
+} 
+
+.img-hover{
+    opacity: 0.5;
+}
 .button() {
     display: flex;
     justify-content: space-around;
     width: 15%;
-    border-radius: 5px;
+    padding: 1%;
+    border: 1px .border(solid, @fontcolor);
+    border-radius: 3px;
     text-align:center; 
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px #888;
 
 }
+
+
+
