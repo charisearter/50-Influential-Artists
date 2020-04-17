@@ -90,6 +90,10 @@ video {
   box-sizing: border-box;
   max-width: 100%;
 }
+a {
+  text-decoration: none;
+  color: dimgrey;
+}
 img {
   border-radius: 10px;
   width: 15%;
@@ -109,4 +113,22 @@ nav a:active {
 header {
   display: flex;
   justify-content: center;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  padding-bottom: 3%;
+}
+.title-container h1 {
+  font-size: 3rem;
+  color: white;
+}
+.artists-container {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid grey;
+  padding-top: 2%;
 }
