@@ -208,11 +208,17 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
-console.log(artists);
+console.log(artists[0].name);
+console.log(artists[2].bio);
 
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+console.log(artists[8].name);
+
+artists[8].name = 'Vincent Van Gogh';
+
+console.log(artists[8].name);
 
 
 
@@ -224,15 +230,12 @@ console.log(artists);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) { //arguments are artist array and the id
-  //loop over array
-  for (let i=0; i<artists.length; i++){
-    if ( id === artists[i]){
-      return `The artist at index ${this.id} is ${this.name}`
-    } //ends if statement
-  } // ends for loop
-} // ends function
+function getArtistByIndex(artists, id) { //arguments are artist array and the id
 
+      return `The artist at index ${id} is ${artists[id].name}`
+
+} // ends function
+console.log(getArtistByIndex(artists, 5));
   /**
 
 
@@ -244,25 +247,29 @@ function getArtistByIndex(id, name) { //arguments are artist array and the id
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-// function removeArtist(arr, id) {
-//   for (let i = 0; i<arr.length; i++)
-//     /* code here */
-//   }
-  
+
+console.log(artists[6].name);
+function removeArtist(artists, id) {
+  delete artists[id];
+    /* code here */
+  }
+  console.log(removeArtist(artists, 6));
   /**
 
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(years){
+function get20s(data){
   const x = []; //new array for artists
   //for loop to go over array
   for (let i=0; i < artists.length; i++){
-    //if year is or fits between 1800 - 1900
-    if (years = artists[i].years && artists[i].years >= 1800 || artists[i].years <= 1900){
+    //if data is or fits between 1800 - 1900
+    if (data == artists[i].years){
+      if (artists[i].years >= 1800 && artists[i].years <= 1900){
     // push the artist objects into the new array
     x.push(artists[i]);
-  }// ends if statements
+      }//ends if statement inside
+  }// ends if statements outside
 }//ends for loop
   //return teh new array
 return x;
