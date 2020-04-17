@@ -208,6 +208,8 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
+console.log(artists);
+
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
@@ -222,10 +224,15 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
-  }
-  
+function getArtistByIndex(id, name) { //arguments are artist array and the id
+  //loop over array
+  for (let i=0; i<artists.length; i++){
+    if ( id === artists[i]){
+      return `The artist at index ${this.id} is ${this.name}`
+    } //ends if statement
+  } // ends for loop
+} // ends function
+
   /**
 
 
@@ -237,20 +244,32 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
+// function removeArtist(arr, id) {
+//   for (let i = 0; i<arr.length; i++)
+//     /* code here */
+//   }
   
   /**
 
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
+function get20s(years){
+  const x = []; //new array for artists
+  //for loop to go over array
+  for (let i=0; i < artists.length; i++){
+    //if year is or fits between 1800 - 1900
+    if (years = artists[i].years && artists[i].years >= 1800 || artists[i].years <= 1900){
+    // push the artist objects into the new array
+    x.push(artists[i]);
+  }// ends if statements
+}//ends for loop
+  //return teh new array
+return x;
 
-    /* Code here */
+  }// ends function
 
-  }
+  console.log(get20s(1804));
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
