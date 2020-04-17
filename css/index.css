@@ -1,3 +1,7 @@
+.font {
+  font-family: 'Roboto', sans-serif;
+  color: dimgrey;
+}
 html,
 body,
 div,
@@ -86,6 +90,13 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9vAw.ttf) format('truetype');
+}
 * {
   box-sizing: border-box;
   max-width: 100%;
@@ -94,12 +105,7 @@ a {
   text-decoration: none;
   color: dimgrey;
 }
-img {
-  border-radius: 10px;
-  width: 15%;
-}
 nav {
-  background-color: pink;
   color: dimgrey;
   font-size: 1.6rem;
 }
@@ -113,6 +119,7 @@ nav a:active {
 header {
   display: flex;
   justify-content: center;
+  padding: 3% 5%;
 }
 .title-container {
   display: flex;
@@ -126,9 +133,40 @@ header {
   font-size: 3rem;
   color: white;
 }
+.title-container .btn {
+  background-color: purple;
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.4rem;
+}
 .artists-container {
   display: flex;
   justify-content: center;
   border-top: 2px solid grey;
   padding-top: 2%;
+}
+.artists-container .artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 0 1%;
+}
+.artists-container .artist img {
+  border-radius: 10px;
+  width: 40%;
+  padding-bottom: 2%;
+}
+.artists-container .artist h2 {
+  margin: 2% 0;
+  font-size: 1.3rem;
+}
+.artists-container .artist .bio {
+  background-color: lightblue;
+  width: 70%;
+  text-align: center;
+  margin: 3% 1%;
 }
