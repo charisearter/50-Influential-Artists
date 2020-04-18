@@ -2,6 +2,7 @@
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 3% 5%;
    
 }
@@ -14,6 +15,10 @@ header {
     border: 1px solid @fontcolor;
     width: 80%;
     margin: 2% 0;
+
+    @media @phone {
+        width: 60%;
+    }
 }    
 }
 
@@ -24,6 +29,11 @@ header {
     align-content: center;
     padding: 0 10%;
 
+    @media @phone {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 
     .artist {
         display:flex;
@@ -36,17 +46,32 @@ header {
         img {
             border-radius: 10px;
             width: 50%;
-            padding-bottom: 2%;
+            margin-bottom: 2%;
+
+            @media @phone {
+                width: 60%;
+                margin: 3%;
+            }
         }
 
         h2{
             font-size: 1.3rem;
+            margin: 2% 0;
+            
         }
         .bio {
             width: 90%;
             text-align: center;
             padding: 1%;
             margin-bottom: 3%;
+            
+
+            @media @phone {
+                text-align: left;
+                line-height: 1.4rem;
+            }
+
+
            
 
         

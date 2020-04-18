@@ -26,7 +26,37 @@
     font-size: 1.2rem;
     box-shadow: 0 0 5px #888;
 
+    @media @phone {
+        font-size: 1rem;
+        width: 30%;
+    }
+
+    @media @sm-phone {
+        font-size: 1rem;
+        width: 40%;
+    }
+
+}
+
+@keyframes myAni {
+    0%{
+        
+        transform: scale(0.1);
+
+    }
+    60% {
+        
+        transform: scale(1.2);
+
+    }
+    100% {
+        
+        transform: scale(1);
+
+    }
 }
 
 
+@phone: ~'(max-width: 500px)';
 
+@sm-phone: ~'(max-width: 300px)';

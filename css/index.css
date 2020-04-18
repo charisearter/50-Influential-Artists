@@ -8,6 +8,17 @@
 .img-hover {
   opacity: 0.5;
 }
+@keyframes myAni {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 html,
 body,
 div,
@@ -115,6 +126,11 @@ nav {
   color: dimgrey;
   font-size: 1.5rem;
 }
+@media (max-width: 500px) {
+  nav {
+    font-size: 1rem;
+  }
+}
 nav a {
   text-decoration: none;
   color: dimgrey;
@@ -125,6 +141,7 @@ nav a:hover {
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 3% 5%;
 }
 #hr {
@@ -136,11 +153,23 @@ header {
   width: 80%;
   margin: 2% 0;
 }
+@media (max-width: 500px) {
+  #hr hr {
+    width: 60%;
+  }
+}
 .artists-container {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
   padding: 0 10%;
+}
+@media (max-width: 500px) {
+  .artists-container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 .artists-container .artist {
   display: flex;
@@ -152,16 +181,29 @@ header {
 .artists-container .artist img {
   border-radius: 10px;
   width: 50%;
-  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist img {
+    width: 60%;
+    margin: 3%;
+  }
 }
 .artists-container .artist h2 {
   font-size: 1.3rem;
+  margin: 2% 0;
 }
 .artists-container .artist .bio {
   width: 90%;
   text-align: center;
   padding: 1%;
   margin-bottom: 3%;
+}
+@media (max-width: 500px) {
+  .artists-container .artist .bio {
+    text-align: left;
+    line-height: 1.4rem;
+  }
 }
 .title-container {
   display: flex;
@@ -184,6 +226,18 @@ header {
   text-align: center;
   font-weight: 700;
   letter-spacing: 1px;
+  animation: myAni 3s;
+}
+@media (max-width: 500px) {
+  .title-container h1 {
+    width: 80%;
+    margin-bottom: 2%;
+  }
+}
+@media (max-width: 300px) {
+  .title-container h1 {
+    font-size: 2rem;
+  }
 }
 .title-container .btn {
   background-color: white;
@@ -196,4 +250,16 @@ header {
   text-align: center;
   font-size: 1.2rem;
   box-shadow: 0 0 5px #888;
+}
+@media (max-width: 500px) {
+  .title-container .btn {
+    font-size: 1rem;
+    width: 30%;
+  }
+}
+@media (max-width: 300px) {
+  .title-container .btn {
+    font-size: 1rem;
+    width: 40%;
+  }
 }
